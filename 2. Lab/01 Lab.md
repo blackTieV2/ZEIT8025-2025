@@ -1,5 +1,4 @@
-##  Operation Triangulation: 
-### What You Get When Attack iPhones of Researchers 
+##  Operation Triangulation: ### What You Get When Attack iPhones of Researchers 
 
 ### Source: [37C3:Unlocked](https://media.ccc.de/v/37c3-11859-operation_triangulation_what_you_get_when_attack_iphones_of_researchers#t=899) 
 
