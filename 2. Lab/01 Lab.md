@@ -3,6 +3,8 @@
 
 ### Source: [37C3:Unlocked](https://media.ccc.de/v/37c3-11859-operation_triangulation_what_you_get_when_attack_iphones_of_researchers#t=899) 
 
+### [Lab 1: Understanding Modern Malware Delivery Methods](2. Lab/Lab 1 Understanding Modern Malware Delivery Methods.pdf)
+
 ### Technical Executive Summary
 
 The presentation on Operation Triangulation, as discussed in the provided sources, delves into a sophisticated zero-click attack targeting iOS devices. The attackers exploited multiple vulnerabilities to install spyware without user interaction, showcasing advanced techniques for stealth and persistence. This summary outlines key points from the presentation, focusing on how the attackers concealed their activities, the specific vulnerabilities exploited, the capabilities of the discovered spyware, and the importance of staying updated with cybersecurity trends.
