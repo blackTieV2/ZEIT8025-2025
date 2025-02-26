@@ -29,7 +29,7 @@ The attackers employed multiple layers of obfuscation and anti-forensic techniqu
    - The exploit performed canvas fingerprinting and checked for emulation tools (e.g., Corellium) to avoid analysis in sandboxed environments.  
    - Jailbreak detection mechanisms prevented execution on compromised devices.  
 
-*Critical Analysis*: The attackers’ reliance on hardware-level vulnerabilities (e.g., Apple SoC registers) and encrypted staging reflects a shift toward *defense evasion* as a primary tactic ![MITRE ATT&CK TA0005](https://attack.mitre.org/tactics/TA0005/). However, their failure to fully sanitize the `DataUsage` database and iMessage folders highlights the difficulty of erasing all forensic artifacts in complex systems.  Atrifact: `Library/SMS/Attachments` folders not deleted.
+*Critical Analysis*: The attackers’ reliance on hardware-level vulnerabilities (e.g., Apple SoC registers) and encrypted staging reflects a shift toward *defense evasion* as a primary tactic [MITRE ATT&CK TA0005](https://attack.mitre.org/tactics/TA0005/). However, their failure to fully sanitize the `DataUsage` database and iMessage folders highlights the difficulty of erasing all forensic artifacts in complex systems.  Atrifact: `Library/SMS/Attachments` folders not deleted.
 
 
 
