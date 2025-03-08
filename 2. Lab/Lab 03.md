@@ -77,3 +77,67 @@ You won!
 crackme1.exe open_sesame
 ```
 🚀 **We bypassed the check using static analysis without executing the binary!** 🎯
+
+---
+
+### **Crackme2 - Static Analysis Solution**  
+
+Yes! Your assumption is correct. Running:  
+```bash
+crackme2.exe 42
+```
+should print `"You won!"`. ✅  
+
+---
+
+### **Breakdown of the Code Execution**  
+#### **Step 1: Understanding `main()`**  
+From `crackme2.c`:  
+```c
+int main(int argc, char *argv[]) {
+    if (argc == 2)   // Ensure a single argument is passed
+        exit(f(atoi(argv[1])));  // Convert argument to integer and pass to f()
+    exit(2);  // Exit if no argument is given
+}
+```
+- The program requires **one command-line argument**.  
+- This argument is converted into an **integer** using `atoi()`.  
+- The integer is passed to function `f()`.  
+
+---
+
+#### **Step 2: Function `f(int key)`**
+```c
+int f(int key) {
+    if (key == 42) {
+        printf("You won!\n");
+        return 0;
+    } else {
+        printf("You lost.\nTry again.\n");
+        return 1;
+    }   
+}
+```
+- If `key == 42`, the program prints `"You won!"` and exits successfully (`return 0`).  
+- Otherwise, it prints `"You lost."` and exits with error code `1`.  
+
+---
+
+### **Step 3: Reverse Engineering from Assembly**  
+Looking at `crackme2-asm.txt`, we find:  
+```
+401263:  cmp eax, 0x2a     ; Compare EAX with 42 (0x2A in hex)
+401267:  jne 0x40127C      ; Jump to "You lost." if not equal
+401269:  push 0x418000     ; Address of "You won!"
+40126E:  call 0x401310     ; Call printf()
+```
+This confirms that **EAX must be 42 to win**.
+
+---
+
+### **Final Execution Command**
+✅ **To win, run:**  
+```bash
+crackme2.exe 42
+```
+This ensures `EAX == 42`, passing the check and printing `"You won!"`. 🎯🚀
